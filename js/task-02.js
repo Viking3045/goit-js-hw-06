@@ -7,10 +7,14 @@ const ingredients = [
   "Condiments",
 ];
 
-for (const ingredient of ingredients) {
-  let list = document.querySelector("#ingredients");
-  const element = document.createElement("li");
-  element.classList.add("item");
-  element.textContent = ingredient;
-  list.append(element);
-}
+
+  const list = document.querySelector("#ingredients");
+  const result = ingredients.map(ingredient =>{
+    const element = document.createElement("li");
+    element.textContent = ingredient;
+    element.classList.add("item");
+    return element;
+  }).reduce((accumulator, curentElement) => {
+        accumulator.append(curentElement);
+        return accumulator
+  }, list)
