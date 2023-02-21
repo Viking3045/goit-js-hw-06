@@ -4,4 +4,4 @@ span.style.fontSize = `${input.value}px`;
 const callback = function () {
   span.style.fontSize = `${input.value}px`;
 };
-input.addEventListener("change", callback);
+input.addEventListener("input", callback);
