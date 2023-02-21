@@ -21,4 +21,4 @@ const markup = images.map(
 );
 
 gallery.insertAdjacentHTML("beforeend", markup);
-const grid = document.querySelector();
+// const grid = document.querySelector();
